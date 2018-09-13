@@ -15,7 +15,17 @@ SELECT * FROM provinciotas;
 
 /* 3) hacer una función que calcule los habitantes de una comunidad autónoma facilitada por el usuario a través de un parámetro de entrada */
 
+
+
 SELECT SUM(poblacion)
   FROM provincias WHERE autonomia='Galicia';
-
-SELECT sumaautonomia('Galicia');
+DROP FUNCTION sumaautonomia;
+CREATE FUNCTION sumaautonomia(vautonomia varchar(255))
+  RETURNS int
+  BEGIN
+   RETURN (
+    SELECT SUM(poblacion)
+      FROM provincias WHERE autonomia=vautonomia    
+    );
+  END;
+SELECT sumaautonomia('Andalucia');
