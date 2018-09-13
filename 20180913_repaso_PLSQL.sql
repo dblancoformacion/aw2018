@@ -12,3 +12,10 @@ CREATE PROCEDURE sumapoblacion()
   END;
 CALL sumapoblacion();
 SELECT * FROM provinciotas;
+
+/* 3) hacer una función que calcule los habitantes de una comunidad autónoma facilitada por el usuario a través de un parámetro de entrada */
+
+SELECT SUM(poblacion)
+  FROM provincias WHERE autonomia='Galicia';
+
+SELECT sumaautonomia('Galicia');
