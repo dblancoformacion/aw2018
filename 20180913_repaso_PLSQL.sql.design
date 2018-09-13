@@ -13,7 +13,7 @@
     <Database>provincias</Database>
   </Connection>
   <Views ShowAdditionalViews="False" IsLayoutActiveAttribute="True" MainViewAttribute="Code" MainViewScale="50">
-    <View Name="Design" Visible="True">
+    <View Name="Design" Visible="False">
       <Data>
         <StatementType>Select</StatementType>
       </Data>
