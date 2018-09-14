@@ -57,3 +57,12 @@ CREATE TRIGGER cifrador2
   BEGIN
     SET new.passwd=MD5(new.passwd);
   END;
+
+
+
+
+/*
+4) hacer un disparador que guarde las contraseñas cifradas
+
+5) hacer un evento que cada minuto guarde el instante en el que se ha dado ese registro de alta
+  */
